@@ -109,7 +109,6 @@ function deleteStudent(id){
       {edit !== null && <button onClick={()=>updateStudent()}>Update Student</button>} 
       {edit === null && <button onClick={()=>addStudent()}>Add Student</button>}
       
-
       <hr/>
 
       <h2>Students</h2>
