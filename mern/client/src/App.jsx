@@ -9,7 +9,7 @@ function App(){
   const[course, setCourse] = useState("");
   const[age, setAge] = useState("");
   const[edit, setEdit] = useState(null);
-
+ 
   //READ
   useEffect(() => {
     axios
@@ -102,11 +102,11 @@ function deleteStudent(id){
     
       <h1>Student Management System</h1>
 
-      <input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
+      <input placeholder="Name" value={name} onChange={(event) => setName(event.target.value)}/>
       <br/>
-      <input placeholder="Course" value={course} onChange={(e) => setCourse(e.target.value)}/>
+      <input placeholder="Course" value={course} onChange={(event) => setCourse(event.target.value)}/>
       <br/>
-      <input placeholder="Age" value={age} onChange={(e) => setAge(e.target.value)}/>
+      <input placeholder="Age" value={age} onChange={(event) => setAge(event.target.value)}/>
 
       <br/>
 
