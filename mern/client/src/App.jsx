@@ -104,9 +104,9 @@ function deleteStudent(id){
       <br/>
       <input placeholder="Age" value={age} onChange={(event) => setAge(event.target.value)}/>
 
-      <br/>
+      <br/><br/>
 
-      {edit !== null && <button onClick={()=>updateStudent()}>Update Student</button>}
+      {edit !== null && <button onClick={()=>updateStudent()}>Update Student</button>} 
       {edit === null && <button onClick={()=>addStudent()}>Add Student</button>}
       
 
