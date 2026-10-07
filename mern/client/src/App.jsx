@@ -10,7 +10,7 @@ function App(){
   const[age, setAge] = useState("");
   const[edit, setEdit] = useState(null);
  
-  //READ
+  
   useEffect(() => {
     axios
       .get("http://localhost:5000/students")
@@ -21,7 +21,6 @@ function App(){
   }, []);
 
 
-//Edit
 function editStudent(student){
   setName(student.name);
   setCourse(student.course);
@@ -30,7 +29,6 @@ function editStudent(student){
 }
 
 
-//createee
 function addStudent(){
   axios
     .post("http://localhost:5000/students", {
@@ -54,7 +52,6 @@ function addStudent(){
   }
 
 
-//update frfr
 function updateStudent(student){
   axios
     .put("http://localhost:5000/students/"+ edit, {
@@ -80,7 +77,6 @@ function updateStudent(student){
   }
 
 
-//delete
 function deleteStudent(id){
   axios
     .delete("http://localhost:5000/students/"+id )

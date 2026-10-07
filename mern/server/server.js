@@ -22,15 +22,12 @@ mongoose
     });
 
 
-//read
-
 app.get("/students", async (req, res) => {
     const students = await Student.find();
     res.json(students);
 });
 
 
-//create
 app.post("/students", async (req, res) => {
     const student = new Student({
         name: req.body.name,
@@ -42,14 +39,12 @@ app.post("/students", async (req, res) => {
 });
 
 
-//update
 app.put("/students/:id", async (req, res) => {
     await Student.findByIdAndUpdate(req.params.id, req.body);
     res.json("Student updated");
 });
 
 
-//delete
 app.delete("/students/:id", async (req, res) => {
     await Student.findByIdAndDelete(req.params.id);
     res.json("Student deleted");
