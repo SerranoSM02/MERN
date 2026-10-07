@@ -10,7 +10,7 @@ function App(){
   const[age, setAge] = useState("");
   const[edit, setEdit] = useState(null);
  
-  
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/students")
@@ -52,7 +52,7 @@ function addStudent(){
   }
 
 
-function updateStudent(student){
+function updateStudent(){
   axios
     .put("http://localhost:5000/students/"+ edit, {
       name: name,
